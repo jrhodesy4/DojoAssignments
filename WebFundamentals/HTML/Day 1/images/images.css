@@ -1,0 +1,70 @@
+.wrapper{
+  width: 900px;
+  height: 900px;
+  background-color: tan;
+}
+.header{
+  display: inline-block;
+  margin-left: 225px;
+  margin-top: 30px;
+}
+.ninja{
+  height: 50px;
+  width: 100px;
+  display: inline-block;
+}
+.github{
+  height: 50px;
+  width: 100px;
+  display: inline-block;
+}
+.header h1{
+  display: inline-block;
+}
+.one{
+  height: 130px;
+  width: 130px;
+  /*position: absolute;*/
+  left: 43px;
+  top: 140px;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: top;
+
+
+}
+.row{
+  vertical-align: top;
+}
+.two{
+  height: 130px;
+  width: 130px;
+  display: inline-block;
+  vertical-align: top;
+  /*position: absolute;*/
+  left: 213px;
+  top: 140px;
+  z-index: 1;
+
+}
+.body{
+  margin-left: 30px;
+}
+.yes{
+  height: 160px;
+  width: 160px;
+  background-color: #85B4EC;
+  outline: 4px solid black;
+  display: inline-block;
+  vertical-align: top;
+}
+.no{
+  height: 160px;
+  width: 160px;
+  background-color: #F26570;
+  outline: 4px solid black;
+  display: inline-block;
+  vertical-align: top;
+
+
+}

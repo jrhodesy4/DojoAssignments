@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        for (var i = 1; i < 152; i++){
+          $('.images').append('<img class="pokemon" id="'+i+'" src="http://pokeapi.co/media/img/' + i + '.png">');
+        }
+
+        $(document).on("click", ".pokemon", function(res){
+          var pic = $(this).attr('id');
+            $.get("http://pokeapi.co/api/v1/pokemon/" + $(this).attr('id')+ "/", function(res){
+              var types = '';
+              for (var i = 0; i < res.types.length; i++) {
+                types += "<li>" + res.types[i].name + "</li>";
+              }
+
+            $('.card').html('<h1>'+res.name+'</h1><img src='+'http://pokeapi.co/media/img/' + pic + '.png'+'><h3>'+'Types'+'</h3><ul>'+types+'</ul><h3>'+'Height'+'</h3><p>'+res.height+'</p><h3>'+'Weight'+'</h3><p>'+res.weight+'</p>');
+          }, 'json');
+        });
+        
+      });
+
+    </script>
+    <style>
+
+    body{
+      display: inline-block;
+    }
+
+    .images{
+      min-height: 1000px;
+      width: 69%;
+      padding-top: 30px;
+      display: inline-block;
+      margin-left: 30px;
+    }
+
+    .right{
+      outline: 35px solid red;
+      border-bottom: 55px solid red;
+      display: inline-block;
+      width: 20%;
+      height: 500px;
+      vertical-align: top;
+      margin-top: 50px;
+      margin-left: 40px;
+      position: fixed;
+      text-align: left;
+    }
+
+    .card{
+      height: 400px;
+      width: 175px;
+      margin-bottom: 10px;
+      padding: 20px;
+      display: inline-block;
+      text-align: left;
+      vertical-align: top;
+
+    }
+    .welcome{
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 40px;
+      color: red;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="welcome">Welcome to My Pokedex!</h1>
+
+    <div class="images"></div>
+
+    <div class="right">
+
+      <div class="card">
+        <h2></h2>
+      </div>
+
+    </div>
+
+  </body>
+</html>

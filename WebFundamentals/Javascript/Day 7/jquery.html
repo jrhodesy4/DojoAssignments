@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery</title>
+    <style>
+      div {
+        color: blue;
+      }
+      span {
+        color: red;
+      }
+      #page{
+        text-align: center;
+        font-family: sans-serif;
+      }
+      #hide{
+        height: 100px;
+        width: 300px;
+        display: inline-block;
+      }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<div>
+  <h3>Are you a fan of clickbait?</h3>
+  <button type="button" name="button"></button>
+  or
+  <button type="button" name="button"></button>
+
+</div>
+
+<script>
+$( "div" ).data( "test", { first: "yes", last: "no" } );
+$( "button:first" ).text( $( "div" ).data( "test" ).first );
+$( "button:last" ).text( $( "div" ).data( "test" ).last );
+</script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('#click').click(function() {
+        $( this ).slideUp();
+      });
+      $('#hide').hover(function(){
+        $( "#hide" ).hide()
+      });
+      $('#show').click(function() {
+        $( "#hide" ).show();
+      });
+      $('#pepe').hover(function() {
+        $('#pepe').fadeOut();
+      });
+      $('#fadein').click(function() {
+        $('#pepe').fadeIn();
+      });
+      $( "#salt" ).hide();
+      $( '#Dank' ).click(function(){
+        $('#salt').slideDown();
+      });
+      $( '#Para').click(function(){
+        $( '#Title').toggle();
+      });
+      $( '#more').click(function() {
+        $( '#page').slideToggle();
+      });
+      $('.useless p').addClass("greetings");
+      $('.greetings').after( "<h2>I came late</h2>");
+      $('.greetings').before( "<h2>I came early</h2>");
+      $( '#fadein').append( ' please');
+      $('#Para').text('Click me to play hide and seek with my title!');
+      $( '#pepe' ).attr({
+        src: "https://pbs.twimg.com/media/CayijGDUYAAJcAk.jpg",
+        title: "Pepeee",
+        alt: "Rip Pepe"
+      });
+      $( "button" ).click(function() {
+        var text = $( this ).text();
+        $( "input" ).val( text );
+      });
+      $('#Class').html('<button>Click to do nothing</button>');
+      $( "#final" ).data( "test", { first: "yes", last: "no" } );
+      $( "span:first" ).text( $( "div" ).data( "test" ).first );
+      $( "span:last" ).text( $( "div" ).data( "test" ).last );
+
+
+
+    });
+    </script>
+  </head>
+  <body>
+    <div id="page">
+
+    <!-- <button type="button" name="button">Button Click</button> -->
+    <p></p>
+    <button id="Para"> Click for hide and seek </button>
+    <h1 id="Title">Welcome to Clickbait City</h1>
+    <div class="pepe">
+
+    <img id="pepe" src="http://i1.kym-cdn.com/photos/images/facebook/000/862/065/0e9.jpg" alt="Pepe" height="250" width="400">
+  </div>
+  <div class="useless">
+
+     <h2 id="Class">Click to do nothing</h2>
+     <p>Hello World</p>
+     <h2 id='hide'>This is my unnecessary paragraph! I do not wish it to be here, so please put me out of my misery and run that pretty little mouse over it. </h2>
+     <h2 id="Class">Click to do nothing</h2>
+     <p>Goodnight Moon</p>
+     <h2 id="Class">Click to do nothing</h2>
+     <button id="fadein" type="button" name="button">Bring Pepe back</button>
+     <button id="show" type="button" name="button">Click to reveal</button>
+     <p>Goodbye Sun</p>
+   </div>
+
+     <div class="bottom">
+       <img id="salt" src="https://media1.popsugar-assets.com/files/thumbor/yXlp640Tn-VxbxP-vaiI2NKZjxA/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2017/01/09/880/n/1922507/17b90c6d5873edb1231823.18767920_edit_img_image_18019874_1483991626/i/What-Salt-Bae-Meme.jpg" alt="Salt Meme" height="200" width="200">
+
+     <button id="Dank" type="button" name="button">Click for Dank Meme</button>
+     <h2 id="click">Click for Magic Trick</h2>
+   </div>
+   <div class="end">
+     <p>Do you like my page?</p>
+     <div class="Yes">
+       <button>Yes</button>
+       <button>No</button>
+       <button>Maybe So</button>
+       <input type="text" value="click a button">
+     </div>
+
+   </div>
+   </div>
+   <p></p>
+   <button id="more" type="button" name="button">See More/Less</button>
+  </body>
+</html>
+
+
+
+
+
+<!-- .click -->
+<!-- .hide -->
+<!-- .show -->
+<!-- .toggle -->
+<!-- .slideDown -->
+<!-- .slideUp -->
+<!-- .slideToggle -->
+<!-- .fadeIn -->
+<!-- .fadeOut -->
+<!-- .addClass -->
+<!-- .before -->
+<!-- .after -->
+<!-- .append -->
+<!-- .html -->
+<!-- .attr -->
+<!-- .val -->
+<!-- .text -->
+<!-- .data -->

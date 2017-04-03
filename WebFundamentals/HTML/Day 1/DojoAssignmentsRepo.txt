@@ -1,0 +1,64 @@
+Last login: Mon Mar 20 18:31:05 on ttys001
+Macintosh:~ Jrhodes$ cd desktop
+Macintosh:desktop Jrhodes$ cd DojoAssignments
+Macintosh:DojoAssignments Jrhodes$ git init
+Initialized empty Git repository in /Users/Jrhodes/Desktop/DojoAssignments/.git/
+Macintosh:DojoAssignments Jrhodes$ git add .
+Macintosh:DojoAssignments Jrhodes$ git commit -m "Made Repo"
+[master (root-commit) 781b006] Made Repo
+ 11 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 MEAN/about.txt
+ create mode 100644 Python/about.txt
+ create mode 100644 Ruby/about.txt
+ create mode 100644 WebFundamentals/CSS/about.txt
+ create mode 100644 WebFundamentals/Git/about.txt
+ create mode 100644 WebFundamentals/HTML/about.txt
+ create mode 100644 WebFundamentals/HTML/indentation.html
+ create mode 100644 WebFundamentals/Javascript/about.txt
+ create mode 100644 WebFundamentals/about.txt
+ create mode 100644 iOS/about.txt
+ create mode 100644 netCore/about.txt
+Macintosh:DojoAssignments Jrhodes$ git remote add origin https://github.com/jrhodesy4/DojoAssignments.git
+Macintosh:DojoAssignments Jrhodes$ git push -u origin master
+Username for 'https://github.com':
+Password for 'https://github.com':
+remote: Anonymous access to jrhodesy4/DojoAssignments.git denied.
+fatal: Authentication failed for 'https://github.com/jrhodesy4/DojoAssignments.git/'
+Macintosh:DojoAssignments Jrhodes$ git remote add origin git@github.com:jrhodesy4/DojoAssignments.git
+fatal: remote origin already exists.
+Macintosh:DojoAssignments Jrhodes$ git push -u origin master
+Username for 'https://github.com': jrhodesy4
+Password for 'https://jrhodesy4@github.com':
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 520 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/jrhodesy4/DojoAssignments.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Macintosh:DojoAssignments Jrhodes$ touch readme.md
+Macintosh:DojoAssignments Jrhodes$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Macintosh:DojoAssignments Jrhodes$ git add .
+Macintosh:DojoAssignments Jrhodes$ git commit -m "added readMe"
+[master b133883] added readMe
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.md
+Macintosh:DojoAssignments Jrhodes$ git push origin master
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 265 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/jrhodesy4/DojoAssignments.git
+   781b006..b133883  master -> master
+Macintosh:DojoAssignments Jrhodes$

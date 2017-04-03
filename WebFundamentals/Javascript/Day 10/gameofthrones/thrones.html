@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Thrones</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      // Targaryen = 378
+      // Baratheon = 16
+      // Stark = 362
+      // Lannister = 229
+
+      var arr = [16,378,229,362]
+      $(document).on("click", "img", function(res){
+        var pic = $(this).attr('id');
+        $.get("http://www.anapioficeandfire.com/api/houses/" + pic, function(res) {
+        console.log(res);
+        var titles = '';
+        for (var i = 0; i < res.titles.length; i++) {
+          titles += "<li>" + res.titles[i] + "</li>";
+        }
+        $('.info').html('<h1>'+'Name:'+' '+res.name+'</h1><h1>'+'Words:'+' '+res.words+'</h1><h1>'+'Titles:'+'</h3><ul>'+titles+'</ul>');
+
+        }, 'json');
+
+      });
+    });
+    </script>
+    <style media="screen">
+    *{
+     margin: 0px;
+     padding: 0px;
+     }
+
+      .wrapper{
+        background-color: black;
+        padding: 20px;
+      }
+      .images{
+        width: 1340px;
+      }
+      img{
+        display: inline-block;
+        height: 190px;
+        width: 330px;
+        border-radius: 20px;
+      }
+      .info{
+        height: 300px;
+        width: 600px;
+        margin-top: 100px;
+        margin-left: 370px;
+        margin-bottom: 120px;
+        background: radial-gradient(white, #3C4C5B);
+        border-radius: 20px;
+        font-family: sans-serif;
+        padding-top: 15px;
+        color: white;
+
+      }
+      .info h1{
+        font-size: 20px;
+        padding-left: 20px;
+        margin-top: 20px;
+      }
+      .info ul{
+        list-style-type: none;
+      }
+      .sidenote{
+        display: inline-block;
+        color: white;
+        font-size: 14px;
+        margin-left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <div class="images">
+        <img id="51" src="baratheon.png">
+        <img id="34" src="targaryen.jpg">
+        <img id="398" src="lannister.jpg">
+        <img id="362" src="stark.jpg">
+      </div>
+
+      <div class="info"></div>
+
+      <div class="sidenote">
+        <p>I know the houses aren't correct, but I chose ones that were working instead. Kevin said I could get 3 new houses as 3 of the original houses were not able to be accessed. </p>
+      </div>
+
+  </div>
+
+  </body>
+</html>

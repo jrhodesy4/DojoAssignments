@@ -1,0 +1,254 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ }
+ .wrapper{
+   width: 970px;
+   height: 810px;
+   background-color: #285175;
+   margin: 0px auto;
+   position: relative;
+}
+.header img{
+  height: 90px;
+  width: 310px;
+  margin-left: 40px;
+}
+.size{
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+  position: absolute;
+  left: 740px;
+  top: 15px;
+  display: inline-block;
+  font-family: sans-serif;
+}
+.size a{
+  color: #CFB74B;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+/*Search Button*/
+#tfheader{
+  background-color:#444444;
+  height: 40px;
+  width: 290px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  position: absolute;
+  left: 645px;
+  top: 35px;
+}
+#tfnewsearch{
+  padding:10px;
+}
+.tftextinput{
+  margin: 0;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  border:1px solid #0076a3; border-right:0px;
+  /*border-top-left-radius: 5px 5px;
+  border-bottom-left-radius: 5px 5px;*/
+}
+.tfbutton {
+  margin: 0;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border: solid 2px grey; border-right:0px;
+  background: #285175;
+  border-top-right-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+  border-radius: 5px;
+}
+.tfbutton:hover {
+  text-decoration: none;
+  background: #007ead;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+  background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+}
+/* Fixes submit button height problem in Firefox */
+.tfbutton::-moz-focus-inner {
+  border: 0;
+}
+.tfclear{
+  clear:both;
+}
+/*Search Button End*/
+.bar{
+  margin-top: 30px;
+  margin-left: 80px;
+  text-align: center;
+  padding-top: 10px;
+  height: 35px;
+  width: 850px;
+  background-color: #4C7EAB;
+  border-radius: 5px;
+}
+.bar a{
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 10px;
+  font-size: 21px;
+  color: white;
+  font-family: sans-serif;
+}
+.navigation a{
+  color: white;
+  font-family: sans-serif;
+}
+.navigation{
+  height: 250px;
+  width: 200px;
+  margin-left: 100px;
+  padding-top: 20px;
+}
+.navigation li{
+  padding-bottom: 10px;
+  color: white;
+}
+.navigation ul {
+    margin: 0.75em 0;
+    padding-top: 10px;
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+/*li:before {
+    content: "";
+    border-color: transparent #FED440;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+    text-align: center;*/
+.navigation li:before {
+  content: "\25B6 \ "; /* caractère ISO 10646 */
+  color: #FED440;
+  font-size: 8px;
+}
+.para{
+  width: 580px;
+  height: auto;
+  position: absolute;
+  left: 330px;
+  top: 200px;
+}
+.graph{
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 13.4px;
+  padding-bottom: 10px;
+}
+.quote{
+  text-align: center;
+  font-size: 1.3em;
+  font-family: sans-serif;
+  color: #CFB74B;
+  padding-bottom: 10px;
+}
+.white{
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.1em;
+}
+.box{
+  width: 100%;
+  height: 225px;
+  background-color: white;
+  margin-top: 70px;
+}
+.left{
+  width: 43%;
+  height: auto;
+  display: inline-block;
+  border-top: 4px solid #76A7D3;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-left: 70px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+.right{
+  width: 43%;
+  height: auto;
+  margin-top: 15px;
+  display: inline-block;
+  border-top: 4px solid #76A7D3;
+  font-family: sans-serif;
+  /*vertical-align: top;*/
+}
+.box ul{
+  padding-left: 70px;
+  font-size: 13.4px;
+  color: #7BA9D4;
+  text-align: center;
+  width: 250px;
+  padding-bottom: 30px;
+  list-style: none;
+}
+.box li{
+  padding-bottom: 5px;
+}
+.box li:before {
+  color: black;
+  content: "•"; color: black;
+
+}
+.left p{
+  font-size: 13.4px;
+  width: 280px;
+  text-align: center;
+  margin-left: 50px;
+  padding-bottom: 5px;
+
+}
+.right p{
+  font-size: 13.4px;
+  width: 300px;
+  text-align: center;
+  margin-left: 30px;
+  padding-bottom: 5px;
+}
+.box h3{
+  text-align: center;
+  font-size: 19px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  font-weight: normal;
+}
+.footer{
+  background-size: cover;
+  margin: 0px auto;
+  background: linear-gradient(#295379, #3872A6);
+  color: #7BA9D4;
+  text-align: center;
+}
+.footer p{
+  display: inline;
+  font-family: sans-serif;
+  padding-left: 25px;
+  padding-right: 15px;
+}
+.footer h4{
+  padding-bottom: 10px;
+  padding-top: 15px;
+  font-family: sans-serif;
+  font-size: 10px;
+}

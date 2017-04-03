@@ -1,0 +1,79 @@
+Last login: Mon Mar 20 17:57:13 on ttys000
+Macintosh:~ Jrhodes$ cd desktop
+Macintosh:desktop Jrhodes$ mkdir gittest
+Macintosh:desktop Jrhodes$ cd gittest
+Macintosh:gittest Jrhodes$ git init
+Initialized empty Git repository in /Users/Jrhodes/Desktop/gittest/.git/
+Macintosh:gittest Jrhodes$ touch index.html
+Macintosh:gittest Jrhodes$ touch styles.css
+Macintosh:gittest Jrhodes$ touch aboutMe.txt
+Macintosh:gittest Jrhodes$ git add .
+Macintosh:gittest Jrhodes$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   aboutMe.txt
+	new file:   index.html
+	new file:   styles.css
+
+Macintosh:gittest Jrhodes$ git commit -m "Added 3 files"
+[master (root-commit) 5cd122b] Added 3 files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+Macintosh:gittest Jrhodes$ git add .
+Macintosh:gittest Jrhodes$ git commit -m "updated aboutMe"
+[master 0a42c2d] updated aboutMe
+ 1 file changed, 1 insertion(+)
+Macintosh:gittest Jrhodes$ git add .
+Macintosh:gittest Jrhodes$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   aboutMe.txt
+
+Macintosh:gittest Jrhodes$ git commit -m "added favorite movie to aboutMe"
+[master 2957a51] added favorite movie to aboutMe
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Macintosh:gittest Jrhodes$ git log
+commit 2957a51d2eceb1c4854ef90c5d72c8656cc9224e
+Author: Jordan Rhodes <jrhodesy4@gmail.com>
+Date:   Mon Mar 20 18:04:29 2017 -0700
+
+    added favorite movie to aboutMe
+
+commit 0a42c2d00c4efc5110332bdf33a3e873e775f15e
+Author: Jordan Rhodes <jrhodesy4@gmail.com>
+Date:   Mon Mar 20 18:03:48 2017 -0700
+
+    updated aboutMe
+
+commit 5cd122b7109721e329313f0e56293e7112b2ecd6
+Author: Jordan Rhodes <jrhodesy4@gmail.com>
+Date:   Mon Mar 20 18:02:40 2017 -0700
+
+    Added 3 files
+Macintosh:gittest Jrhodes$ git revert -n HEAD
+Macintosh:gittest Jrhodes$ git revert -n 2957a51
+Macintosh:gittest Jrhodes$ git add .
+Macintosh:gittest Jrhodes$ git status
+On branch master
+You are currently reverting commit 2957a51.
+  (all conflicts fixed: run "git revert --continue")
+  (use "git revert --abort" to cancel the revert operation)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   aboutMe.txt
+
+Macintosh:gittest Jrhodes$ git commit -m "changed to book"
+[master 2232d7c] changed to book
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Macintosh:gittest Jrhodes$

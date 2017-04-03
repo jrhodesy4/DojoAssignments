@@ -1,0 +1,15 @@
+pip install Django is simply the command to install Django, and all its contents.
+
+pip list is a command that lists all installed packages and editable.
+
+pip install Django again doesn’t do anything since it has already been installed. It merely states that the requirement was already satisfied and tells you where Django is.
+
+pip freeze outputs installed packages in a requirements format. List merely lists them.
+
+pip freeze > requirements.txt creates a file on the desktop with the output of all installed packages in their requirements format.
+
+pip uninstall Django removes all the files of Django from the computer, uninstalling Django. Giving a successfully uninstalled Django message at the end.
+
+pip show Django does nothing since Django has been uninstalled.
+
+pip search Flask searches through the files to find everything containing the word Flask and lists it.

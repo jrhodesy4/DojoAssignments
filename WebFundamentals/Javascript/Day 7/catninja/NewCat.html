@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>JQuery Test</title>
+  <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('img').click(function() {
+
+        // get the alt-source
+        var altSrc = $(this).attr('data-alt-src');
+        var temp = $(this).attr('src');
+
+        // Swap
+        $(this).attr('src', altSrc);
+        $(this).attr('data-alt-src', temp);
+
+        // function switchImg () {
+        //   var imgTwo = $(this).attr('data-alt-src'));
+        //   $('img').hide();
+        //   $(imgTwo).show();
+        // };
+        // switchImg();
+      });
+
+    });
+  </script>
+  <style>
+    img {
+      display: block;
+      width: 30%;
+      margin: auto;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="img/ninja0.png" data-alt-src='img/cat0.png' />
+  <img src="img/ninja1.png" data-alt-src='img/cat1.png' />
+  <img src="img/ninja2.png" data-alt-src='img/cat2.png' />
+  <img src="img/ninja3.png" data-alt-src='img/cat3.png' />
+  <img src="img/ninja4.png" data-alt-src='img/cat4.png' />
+
+</body>
+</html>

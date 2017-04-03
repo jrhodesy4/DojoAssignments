@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Advanced</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </script>
+
+    <script type="text/javascript">
+
+
+    $(document).ready(function(){
+      $('button').click(function(){
+        var f_n = $('#f_n').val();
+        var l_n = $('#l_n').val();
+        var email = $('#email').val();
+        var contact = $('#contact').val();
+        var newRow = ('<tr><td>' + f_n + "</td><td>" + l_n + "</td><td>" + email + "</td><td>" + contact);
+        $('table').append(newRow);
+      });
+    });
+    </script>
+    <style>
+      table{
+        outline: 2px solid black;
+      }
+      td{
+        padding-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <table>
+          <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email Address</td>
+            <td>Contact #</td>
+          </tr>
+      </table>
+      <h1>Add User</h1>
+      <form>
+        First name:<br>
+        <input id="f_n" type="text" name="firstname"><br>
+        Last name:<br>
+        <input id="l_n" type="text" name="lastname"><br>
+        Email Address:<br>
+        <input id="email" type="text" name="email"><br>
+        Contact No.:<br>
+        <input id="contact" type="text" name="phone"><br>
+      </form>
+        <button>Add User</button>
+    </div>
+
+  </body>
+</html>

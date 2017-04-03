@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title>
+  </head>
+
+  <style>
+  /*.container{
+    outline: 2px solid black;
+    display: inline-block;
+    width: 60%;
+    height: 1000px;
+    margin-left: 400px;
+    margin-top: -140px;*/
+  button{
+    display:inline-block;
+    width: 200px;
+    vertical-align: top;
+  }
+  div{
+    width: 200px;
+    height: 150px;
+    background-color: red;
+    display: inline-block;
+  }
+  </style>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('button').click(function(){
+      var f_n = $('#f_n').val();
+      var l_n = $('#l_n').val();
+      var desc = $('#desc').val();
+      var newDiv = ('<div>' + f_n + l_n + desc + '</div>');
+      $('div').append(newDiv);
+      $('desc').hide();
+       $(newDiv).css('background-color', 'red')
+      });
+    $('button').click(function(){
+      $('div').append('<div>' + '</div>');
+      });
+    });
+
+  </script>
+  <body>
+    <form>
+      First name:<br>
+      <input id="f_n" type="text" name="firstname"><br>
+      Last name:<br>
+      <input id="l_n" type="text" name="lastname"><br>
+      Description:<br>
+      <textarea id="desc" type="text" name="description" cols="40" rows="5"></textarea>
+    </form>
+    <button>Add User</button>
+    <div>
+
+    </div>
+
+  </body>
+</html>
