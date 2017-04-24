@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Results</title>
+  </head>
+  <body>
+    <p>Thanks for submitting the form! You have submitted this form {{ request.session.id }} times now.</p>
+    <h1>Submitted Info:</h1>
+    <p>Name: {{ request.session.name }}</p>
+    <p>Dojo Location: {{ request.session.location }}</p>
+    <p>Favorite Language: {{ request.session.language }}</p>
+    <p>Comments: {{ request.session.comments }}</p>
+    <form class="" action="/regress" method="post">
+      {% csrf_token %}
+      <input type="submit" name="submit" value="Go Back">
+
+    </form>
+  </body>
+</html>

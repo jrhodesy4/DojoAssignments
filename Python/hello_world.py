@@ -1,4 +1,6 @@
 str = "It's thanksgiving day. It's my birthday,too!"
+words = str.split(' ')
+print words.index('day.')
 print str.replace('day','month')
 
 x = [2,54,-2,7,12,98]

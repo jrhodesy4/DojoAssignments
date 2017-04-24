@@ -1,4 +1,4 @@
-def characterList(list, char):
+      def characterList(list, char):
     list2 = []
     letters = str(char)
     for word in list:

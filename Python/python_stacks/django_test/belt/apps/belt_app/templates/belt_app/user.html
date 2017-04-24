@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User</title>
+  </head>
+  <body>
+    <div class="top">
+      <a href="/main">Home</a>
+      <a href="/add">Add Book and Review</a>
+      <a href="/logout">Logout</a>
+    </div>
+    {% for user in users %}
+    <h2>User Alias: {{ user.alias }}</h2>
+    <h2>Name: {{ user.name }}</h2>
+    <h2>Email: {{ user.email }}</h2>
+    <h2>Total Reviews: {{ user.reviews.count }}</h2><br><br>
+    <h3>Books Reviewed:</h3>
+    {% endfor %}
+    {% for review in reviews  %}
+    {% if review.user_id.id == user.id%}
+    <a href="/books/{{ review.id }}">{{ book.title }}</a>
+    {% endif %}
+    {% endfor %}
+
+
+
+
+  </body>
+</html>

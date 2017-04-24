@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="header">
+      <h2>The John Wall</h2>
+      <!-- <p>Welcome {{ session['first_name'] }}</p> -->
+
+    </div>
+    <div class="messagings">
+      <p>Post a message</p>
+      <form class="" action="/message" method="post">
+        <textarea name="messagings" rows="6" cols="160"></textarea>
+        <input type="submit" name="" value="Post Message">
+      </form>
+    </div>
+    {% for message in all_messages %}
+    <div class="messages">{{ message }}</div>
+    {% end for %}
+    <div class="comments">
+      <p>Post a comment</p>
+      <form class="" action="/comment" method="post">
+        <textarea name="comment" rows="4" cols="80"></textarea>
+        <input type="text" name="submit" value="Post a comment">
+
+      </form>
+
+    </div>
+
+  </body>
+</html>

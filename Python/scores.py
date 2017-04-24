@@ -1,17 +1,15 @@
-def scores(num):
-    import random
-    # num = random.randint()
-    if num > 89:
-        print "Score:" + str(num), "Your grade is A"
-    elif num > 79:
-        print "Score:" + str(num), "Your grade is B"
-    elif num > 69:
-        print "Score:" + str(num), "Your grade is C"
-    else:
-        print "Score:" + str(num), "Your grade is D"
-
-scores(50)
-
 import random
-num = random.randint()
-print num
+def randomScores(nums):
+    nums = random.sample(xrange(60,100), 10)
+    print nums
+    for i in nums:
+        if i > 89:
+            print "Score:" + str(i), "Your grade is A"
+        elif i > 79:
+            print "Score:" + str(i), "Your grade is B"
+        elif i > 69:
+            print "Score:" + str(i), "Your grade is C"
+        else:
+            print "Score:" + str(i), "Your grade is D"
+
+randomScores("x")

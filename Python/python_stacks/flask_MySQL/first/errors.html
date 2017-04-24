@@ -1,0 +1,11 @@
+OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (61)")
+
+I wasn't using the correct port, so I changed my port number to the correct one.
+
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+I created a wrong password other than root, so I changed it back.
+
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'meeee'@'localhost' (using password: YES)")
+
+The 'user' was named something other than root, so I changed it back to root

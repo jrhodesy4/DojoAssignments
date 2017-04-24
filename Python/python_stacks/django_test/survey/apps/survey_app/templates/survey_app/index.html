@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="survey" action="/submit" method="post">
+      {% csrf_token %}
+      Your Name:<input type="text" name="name" value="">
+      Dojo Location:<input type="text" name="dojo" value="">
+      Favorite Language:<input type="text" name="language" value="">
+      Comments (optional):<textarea name="comments" rows="8" cols="80"></textarea>
+      <input type="submit" name="submit" value="Submit">
+    </form>
+
+  </body>
+</html>
